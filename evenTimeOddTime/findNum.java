@@ -32,7 +32,7 @@ public class findNum {
         int onlyOne = 0;
      
         for(int num: arr){
-            if((rightOne & num) == 1 ){
+            if((rightOne & num) == rightOne ){  // rightOne & num = rightOne or 0 
                 onlyOne ^= num; // find one possible number out of two
             }
         }

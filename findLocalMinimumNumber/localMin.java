@@ -31,8 +31,12 @@ public class localMin {
         int mid =first + (last - first)/2;
 
         if(mid == 0){return mid;}
-        if(arr[first]< arr[first+1]){return first;}
-        if(arr[last]< arr[last-1]){return last;}
+
+        if(last - first <3){
+            if(arr[first]< arr[first+1]){return first;}
+            if(arr[last]< arr[last-1]){return last;}
+        }
+
 
 
         if( arr[mid -1] > arr[mid] && arr[mid] <arr[mid+1] ){
@@ -47,7 +51,7 @@ public class localMin {
         return findAllLocalMin(arr,0,l-1);
     }
     public static void main(String[] args) {
-        int [] arr = {3,2,1};
+        int [] arr = {9, 6, 3, 14, 5, 7, 4};
         int i = findLocalMin(arr, arr.length);
         System.out.println("Index of local minima is "+ i );
     }

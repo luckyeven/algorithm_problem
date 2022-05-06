@@ -1,9 +1,14 @@
-// findOddnumber1([1,1,1,1,2,2,2,3,3,3,3]); print 2
+/**
+ * findOddNumber1([1,1,1,1,2,2,2,3,3,3,3]); print 2
+ * findOddNumber2([1,1,1,1,2,2,2,3,3,3,4,4,4,4]); print 2, 3
+ * time complex O(n), space complex O(1)
+ * 
+ * @author Shifeng Song @luckyeven
+ * @since 2022-05-06
+ * @version 1.0
+ */
 
-// findOddnumeber2([1,1,1,1,2,2,2,3,3,3,4,4,4,4]); print 2, 3
-
-// time complex O(n), space complex O(1)
-public class findNum {
+public class FindOddNumber {
     public static void main(String[] args) {
         int [] arr1 = {1,1,1,1,2,2,2,3,3,3,3};
         int [] arr2 = {1,1,1,1,2,2,2,3,3,3,4,4,4,4};
@@ -32,8 +37,12 @@ public class findNum {
         int onlyOne = 0;
      
         for(int num: arr){
-            if((rightOne & num) == rightOne ){  // rightOne & num = rightOne or 0 
-                onlyOne ^= num; // find one possible number out of two
+
+            // rightOne & num = rightOne or 0 
+            if((rightOne & num) == rightOne ){
+                
+                // find one possible number out of two
+                onlyOne ^= num; 
             }
         }
         System.out.println(onlyOne+" "+ (onlyOne^eor));

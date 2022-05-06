@@ -1,13 +1,20 @@
-import java.util.Arrays;
 /**
  *  Quick sort version 1
  *  average time complex O(NlogN), worst time complex O(N^2)
+ * 
+ * @author Shifeng Song @luckyeven
+ * @since 2022-05-06
+ * @version 1.0
  *  
  */
-public class quickSort_1 {
+import java.util.Arrays;
+
+public class QuickSort_1 {
 
     public static void quickSort(int [] arr){
-        if(arr == null || arr.length <2 ){
+
+        int minLength = 2;
+        if(arr == null || arr.length < minLength ){
             return;
         }
         process(arr,0,arr.length -1);
@@ -26,8 +33,11 @@ public class quickSort_1 {
         
     }
 
-    // sort arr, return a list of two index 
-    // [N1,N2, ..., Nn] -> [<Nn] [==Nn] [>Nn]
+ 
+    /**
+     * sort arr, return a list of two index 
+     *  [N1,N2, ..., Nn] -> [<Nn] [==Nn] [>Nn]
+     */
     public static int[] partition(int[] arr, int left, int right){
 
 
@@ -58,7 +68,9 @@ public class quickSort_1 {
         arr[right] = arr[left] ^ arr[right];
         arr[left] = arr[left] ^ arr[right];
     }
+
     public static void main(String[] args) {
+        
         int [] arr = {4,5,1,5,7,6,3,10,10,8};
         quickSort(arr);
         System.out.println("Quick sorted: "+ Arrays.toString(arr));

@@ -1,24 +1,30 @@
-/*
-small sum problem
+/** 
+ * small sum problem
+ * 
+ * In an array, the numbers to the left of each number that are smaller than the current number are added up, 
+ * which is called the small sum of the array. Find the small sum of an array.
+ * 
+ * 
+ * Example: [1,3,4,2,5]
+ * The left side of 1 is smaller than 1: no;
+ * The number to the left of 3 that is smaller than 3: 1;
+ * Numbers smaller than 4 to the left of 4: 1, 3;
+ * Number to the left of 2 smaller than 2: 1;
+ * Numbers smaller than 5 to the left of 5: 1, 3, 4, 2;
+ * 
+ * So the small sum is 1+1+3+1+1+3+4+2=16
+ * 
+ * @author Shifeng Song @luckyeven
+ * @since 2022-05-06
+ * @version 1.0
+ */
 
-In an array, the numbers to the left of each number that are smaller than the current number are added up, 
-which is called the small sum of the array. Find the small sum of an array.
 
-
-Example: [1,3,4,2,5]
-The left side of 1 is smaller than 1: no;
-The number to the left of 3 that is smaller than 3: 1;
-Numbers smaller than 4 to the left of 4: 1, 3;
-Number to the left of 2 smaller than 2: 1;
-Numbers smaller than 5 to the left of 5: 1, 3, 4, 2;
-
-So the small sum is 1+1+3+1+1+3+4+2=16
-*/
-
-public class smallSum {
+public class SmallSum {
 
     public  static int findSmallSum(int [] arr){
-        if(arr == null || arr.length < 2){
+        int minLength =2;
+        if(arr == null || arr.length < minLength){
             return 0;
         }
 

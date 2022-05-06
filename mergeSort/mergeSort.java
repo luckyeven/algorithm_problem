@@ -1,9 +1,19 @@
+/**
+ * This MergeSort program implement a merge sort algorithm
+ * 
+ * @author Shifeng Song @luckyeven
+ * @since 2022-05-06
+ * @version 1.0
+ */
+
+
 import java.util.Arrays;
-public class mergeSort {
+public class MergeSort {
 
+    static final int MINIMUM_LENGTH_OF_ARRAY = 2;
 
-    public static void Sort(int [] arr){
-        if(arr.length < 2 || arr == null){
+    public static void sort(int [] arr){
+        if(arr.length < MINIMUM_LENGTH_OF_ARRAY || arr == null){
             return;
         }
 
@@ -24,9 +34,10 @@ public class mergeSort {
 
     public static void merge(int[] arr, int left, int mid, int right){
         int[] tmp = new int[right-left +1];
-        int i = 0; // index of arr
-        int first = left;  // first pointer
-        int second = mid + 1;  // second pointer
+        // index of arr
+        int i = 0; 
+        int first = left;  
+        int second = mid + 1;  
 
         while(first <= mid && second <= right){
             tmp[i++] = arr[first] <= arr[second]? arr[first++]:arr[second++];
@@ -52,11 +63,11 @@ public class mergeSort {
             6,4,613,165,749,84,981,13,165,165,4,94,961,65,165,46,87,41,6321,661,654,64,9,4,61,4156,
             65,165,165,132,132,4,3,1,3,6,54,1,31,98,7,9,8,5,63,3,1,85694,651,563,65,4,651,64,651,698,47,61,654,654,651,65,165,46,54};
 
-        Sort(arr);
+        sort(arr);
         System.out.println(Arrays.toString(arr));
 
         int [] arr1 = {5,9,6,3,1,4,0};
-        Sort(arr1);
+        sort(arr1);
         System.out.println(Arrays.toString(arr1));
     }
 }

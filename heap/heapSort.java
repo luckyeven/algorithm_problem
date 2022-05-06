@@ -9,12 +9,14 @@
 public class HeapSort {
 
 
-    public static void heapInsert(int[] arr, int i, int, index){
+    public static void heapInsert(int[] arr, int i, int index){
         
     }
 
     public static void swap(int[] arr, int left, int right){
-        if( arr[left] != arr[right]){    //  cause bug when arr[left] and arr[right] references to the same thing.
+
+        //  cause bug when arr[left] and arr[right] references to the same thing.
+        if( arr[left] != arr[right]){    
 
             arr[left] = arr[left] ^ arr[right];
             arr[right] = arr[left] ^ arr[right];
@@ -23,7 +25,7 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int [] arr = {3, 6, 3, 5, 9, 3, 10, 2, 1, 1};
+        //int [] arr = {3, 6, 3, 5, 9, 3, 10, 2, 1, 1};
     }
 
 }

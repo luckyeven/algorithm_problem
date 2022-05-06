@@ -1,8 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "mergeSort",
-        "findLocalMinimumNumber",
-        "evenTimeOddTime",
-        "quickSort"
-    ]
-}

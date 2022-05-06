@@ -14,7 +14,7 @@ Numbers smaller than 5 to the left of 5: 1, 3, 4, 2;
 
 So the small sum is 1+1+3+1+1+3+4+2=16
 */
-import java.util.Arrays;
+
 public class smallSum {
 
     public  static int findSmallSum(int [] arr){

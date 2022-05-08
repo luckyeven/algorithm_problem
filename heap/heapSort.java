@@ -8,14 +8,17 @@
 
 public class HeapSort {
 
-
+    
     public static void heapInsert(int[] arr, int i, int index){
-        
+        // big root pile
+        while( ){
+
+        }
     }
 
     public static void swap(int[] arr, int left, int right){
 
-        //  cause bug when arr[left] and arr[right] references to the same thing.
+        //  cause bug when arr[left] and arr[right] references to the same object.
         if( arr[left] != arr[right]){    
 
             arr[left] = arr[left] ^ arr[right];

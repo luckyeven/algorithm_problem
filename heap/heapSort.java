@@ -6,13 +6,18 @@
  * 
  */
 
+ import java.util.Arrays;
 public class HeapSort {
 
     
     public static void heapInsert(int[] arr, int i, int index){
-        // big root pile
-        while( ){
+        
+        arr[index] = i;
 
+        // big root pile
+        while(arr[index] > arr[(index-1) /2]){
+            swap(arr, index, (index-1)/2);
+            index = (index -1) /2; 
         }
     }
 
@@ -28,7 +33,17 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        //int [] arr = {3, 6, 3, 5, 9, 3, 10, 2, 1, 1};
+        int [] arr = {3, 6, 3, 5, 9, 3, 10, 2, 1, 1};
+        int [] bigPile = new int[arr.length];
+
+       /*  swap(arr, 0, 9);
+        System.out.println("Test swap: " +Arrays.toString(arr)); */
+
+        System.out.println("Test heapInsert: \n");
+        for(int i = 0; i< bigPile.length;i++){
+            heapInsert(bigPile, arr[i], i);
+            System.out.println(Arrays.toString(bigPile));
+        }
     }
 
 }

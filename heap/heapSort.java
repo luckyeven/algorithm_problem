@@ -10,10 +10,9 @@
 public class HeapSort {
 
     
-    public static void heapInsert(int[] arr, int i, int index){
+    public static void heapInsert(int[] arr, int index){
         
-        arr[index] = i;
-
+      
         // big root pile
         while(arr[index] > arr[(index-1) /2]){
             swap(arr, index, (index-1)/2);
@@ -38,10 +37,13 @@ public class HeapSort {
 
        /*  swap(arr, 0, 9);
         System.out.println("Test swap: " +Arrays.toString(arr)); */
-
-        System.out.println("Test heapInsert: \n");
+        
+        
+        // [10, 6, 9, 3, 5, 3, 3, 2, 1, 1]
+        System.out.println("Test heapInsert: \n");  
         for(int i = 0; i< bigPile.length;i++){
-            heapInsert(bigPile, arr[i], i);
+            bigPile[i] = arr[i];
+            heapInsert(bigPile, i);
             System.out.println(Arrays.toString(bigPile));
         }
     }

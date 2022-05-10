@@ -14,7 +14,8 @@ import java.lang.Math;
 public class HeapSort {
 
     /**
-     * construct a heap tree from index 
+     * construct a heap tree from index
+     * 
      * @param arr
      * @param index
      */
@@ -40,9 +41,10 @@ public class HeapSort {
 
     /**
      * up down create a heap structure from index
-     * @param arr 
-     * @param index consider as a root
-     * @param heapSize 
+     * 
+     * @param arr
+     * @param index    consider as a root
+     * @param heapSize
      */
     public static void heapify(int[] arr, int index, int heapSize) {
         int leftChild = index * 2 + 1;
@@ -65,6 +67,7 @@ public class HeapSort {
 
     /**
      * Binary tree visualization
+     * 
      * @param arr
      * @param heapSize
      */
@@ -98,30 +101,51 @@ public class HeapSort {
 
     }
 
+    public static void heapSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            heapInsert(arr, i);
+        }
+
+        int heapSize = arr.length;
+
+        while (heapSize > 0) {
+            swap(arr, 0, --heapSize);
+            heapify(arr, 0, heapSize);
+        }
+
+    }
 
     public static void main(String[] args) {
-  
+
         int[] arr = { 3, 6, 3, 5, 9, 3, 10, 2, 1, 1 };
-        int heapSize ;
+        heapSort(arr);// O(NlogN)
+        System.out.println(Arrays.toString(arr));
+        /*
+         * int heapSize ;
+         * 
+         * // heapify the whole array
+         * for(heapSize = 0; heapSize < arr.length; heapSize++){
+         * heapInsert(arr, heapSize);
+         * 
+         * }
+         * 
+         * System.out.println("Heap Array:");
+         * printTree(arr, heapSize);
+         * 
+         * // Heap sort start from here
+         * 
+         * while(heapSize>0){
+         * swap(arr, 0, --heapSize);
+         * heapify(arr,0 , heapSize);
+         * }
+         * 
+         * System.out.println("Sorted array: \n"+ Arrays.toString(arr));
+         */
 
-        // heapify the whole array 
-        for(heapSize = 0; heapSize < arr.length; heapSize++){
-            heapInsert(arr, heapSize);
-        
-        }
-
-        System.out.println("Heap Array:");
-        printTree(arr, heapSize);
-
-        // Heap sort start from here
-
-        while(heapSize>0){
-            swap(arr, 0, --heapSize);
-            heapify(arr,0 , heapSize);
-        }
-
-        System.out.println("Sorted array: \n"+ Arrays.toString(arr));
-        
     }
 
 }

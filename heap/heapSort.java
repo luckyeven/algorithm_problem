@@ -14,7 +14,7 @@ import java.lang.Math;
 public class HeapSort {
 
     /**
-     * construct a heap tree from index
+     * construct a heap tree from index, moving up
      * 
      * @param arr
      * @param index

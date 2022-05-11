@@ -6,7 +6,7 @@ Algorithm
 # Merge Sort
 
 ### 1.Basic Ideas
-<img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/merge.png?raw=true" width="100%" height="100%">
+<img " width="100%" height="100%">
 
 * Advantage: Stable, worst time complexity is O(n log n)  
 * Disadvantage: O(n) space complexity

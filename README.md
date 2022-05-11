@@ -39,5 +39,4 @@ Algorithm
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/heapSort.gif?raw=true" width="98.39%" height="98.39%">
 
 # Time complexity Cheat Sheet
-<img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true?" width="98.39%" height="98.39%"> 
-
+<img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true" width="98.39%" height="98.39%">

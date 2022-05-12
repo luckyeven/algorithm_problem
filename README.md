@@ -35,6 +35,12 @@ Algorithm Note
 * Advantage: O(n log b) time complexity, O(1) space complexity
 * Disadvantage: not stable, need to create a heap
 
+### Question
+
+* Q1   
+Given an almost sorted array where each element may be misplaced by no more than k positions from the correct sorted order, write a function to sort the array.
+* [Solution](https://github.com/luckyeven/algorithm_problem/blob/main/heap/KsortedArraySort.java#L34)
+
 ### 2.Demo
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/heapSort.gif?raw=true" width="98.39%" height="98.39%">
 

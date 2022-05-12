@@ -122,7 +122,9 @@ public class HeapSort {
     public static void main(String[] args) {
 
         int[] arr = { 3, 6, 3, 5, 9, 3, 10, 2, 1, 1 };
-        heapSort(arr);// O(NlogN)
+
+        // O(NlogN)
+        heapSort(arr);
         System.out.println(Arrays.toString(arr));
         /*
          * int heapSize ;

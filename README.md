@@ -49,6 +49,11 @@ Algorithm Note
 # Bucket sort
 ### 1.Basic Ideas
 Bucket Sort is a sorting algorithm that divides the unsorted array elements into several groups called buckets. Each bucket is then sorted by using any of the suitable sorting algorithms or recursively applying the same bucket algorithm.  
-<img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/bucketSort.png" width="98.39%" height="98.39%"> 
+
+<img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/bucketSort.png?raw=true" width="98.39%" height="98.39%"> 
+
+* Counting Sort
+* Radix Sort
+
 # Time complexity Cheat Sheet
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true" width="98.39%" height="98.39%">

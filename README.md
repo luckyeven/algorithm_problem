@@ -52,8 +52,13 @@ Bucket Sort is a sorting algorithm that divides the unsorted array elements into
 
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/bucketSort.png?raw=true" width="98.39%" height="98.39%"> 
 
-* Counting Sort
-* Radix Sort
+----
+* Best case: When all data can be equally distributed to each bucket.
+* Worst case: When all data is assigned to one bucket.
+------
+* Different bucket sort
+    * Counting Sort
+    * Radix Sort
 
 # Time complexity Cheat Sheet
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true" width="98.39%" height="98.39%">

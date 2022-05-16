@@ -58,7 +58,40 @@ Bucket Sort is a sorting algorithm that divides the unsorted array elements into
 ------
 * Different bucket sort
     * Counting Sort
-    * Radix Sort
+    * Radix Sort  
+    ```JAVA
+    // pseudocode
+    RADITSORT(array,begin,end){
+        if array is null or array.length is 1 then
+            return
+        end if
+
+        RADIX := 10; // since the base is 10
+        Digits := FindMaxRadix(array)  // number of digits of the largest number in the array
+
+        Let bucket be an array from begin to end
+        let i,j:= int
+        for digit is [1 to Digits] do
+            Let counter be an array of 0 to 9 // [0,1,...9]
+            for i is [begin to end] do
+                j := getDigit(array,digit)
+                counter[j]++
+            end for
+            
+            for items in counter do
+                item[N] = item[N] + item[N +1]// N start form 1
+            end for
+            
+            for i:= [end to begin] do
+                j:= getDigit(array[i]. digit)
+                bucket[counter[j] -1] = array[i]
+                counter[j]--
+            end for
+
+            copy bucket to array
+        end for
+    }
+    ```
 
 # Time complexity Cheat Sheet
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true" width="98.39%" height="98.39%">

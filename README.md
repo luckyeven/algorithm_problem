@@ -103,7 +103,7 @@ Bucket Sort is a sorting algorithm that divides the unsorted array elements into
 * Stable Sort
     * Bubble Sort
     * Insertion Sort
-    * Merge Sort
+    * Recursion(Merge) Sort
     * All Bucket Sort
 * Unstable Sort
     * Selection Sort
@@ -124,3 +124,7 @@ N/b = size of each subproblem
 2) logb(a) >ｄ；Time complexity O(N^logb(a))
 3) logb(a) = d ; Time complexity O(N^d * logN)
 ```
+------
+# Fun Questions
+> Q: Why does Java's Arrays.sort method use two different sorting algorithms for different types?  
+A : For primitive types, it does not matter if change their relative position. Therefore, a unstable quicksort can be used. On the other hand, It could cause bugs if change the relative position of reference types, Therefore, a stable merge sort is performed.

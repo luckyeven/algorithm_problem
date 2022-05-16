@@ -12,7 +12,11 @@ Algorithm Note
 * Disadvantage: O(n) space complexity
 
 > `A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output.`
-
+```JAVA Get mid point: 
+mid = (Left + Right) / 2; // risk of overflow
+    or
+mid = Left + ((Right - Left) >> 1 ); 
+```
 ### 2.Demo
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/mergeSort.gif?raw=true" width="98.39%" height="98.39%">
 
@@ -95,3 +99,28 @@ Bucket Sort is a sorting algorithm that divides the unsorted array elements into
 
 # Time complexity Cheat Sheet
 <img src="https://github.com/luckyeven/algorithm_problem/blob/main/picture/sorts.jpg?raw=true" width="98.39%" height="98.39%">
+
+* Stable Sort
+    * Bubble Sort
+    * Insertion Sort
+    * Merge Sort
+    * All Bucket Sort
+* Unstable Sort
+    * Selection Sort
+    * Quick Sort
+    * Heap Sort
+> There is no perfect algorithm yet: None of any sorting algorithm has time complex of O(NlogN) , space complex O(1) and stable!
+-----
+# Recursion Time Complexity
+
+```BUSH
+T(N) = a * T(N/B) + O(N^d)  // Master formula 
+Where:
+N = size of input
+a = number of sub-problems called in the recursion
+N/b = size of each subproblem
+
+1) logb(a) < d ; Time complexity  O(N^d)
+2) logb(a) >ｄ；Time complexity O(N^logb(a))
+3) logb(a) = d ; Time complexity O(N^d * logN)
+```

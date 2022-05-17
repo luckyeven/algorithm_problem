@@ -126,9 +126,8 @@ N/b = size of each subproblem
 ```
 
 ## Hash Table/Set
-* Hash table is called unOrderedMap or unSortedMap in C++
-* Hash table pass a copy when it's a primary type Hash table. Ex: HashMap<Integer>
-* Hash table pass reference to the memory address (8bits long) when it's other type Hash table. Ex: HashMap<Student>
+
+
 Set: Key only
 ```JAVA
 HashSet<Integer> hashSet1 = new HashSet<>();
@@ -137,6 +136,9 @@ hashSet1.remove(3); // remove 3
 System.out.println(hashSet1.contains(3)); // Return False
 ```
 Map: Key -> Value
+* Hash table is called unOrderedMap or unSortedMap in C++
+* Hash table pass a copy when it's a primary type Hash table. Ex: HashMap< Integer>
+* Hash table pass reference to the memory address (8bits long) when it's other type Hash table. Ex: HashMap< Student> 
 ```JAVA
 // unordered
 HashMap<Integer, String> mapTest = new HashMap<>();

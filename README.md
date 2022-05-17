@@ -124,7 +124,93 @@ N/b = size of each subproblem
 2) logb(a) >ｄ；Time complexity O(N^logb(a))
 3) logb(a) = d ; Time complexity O(N^d * logN)
 ```
+
+## Hash Table/Set
+* Hash table is called unOrderedMap or unSortedMap in C++
+* Hash table pass a copy when it's a primary type Hash table. Ex: HashMap<Integer>
+* Hash table pass reference to the memory address (8bits long) when it's other type Hash table. Ex: HashMap<Student>
+Set: Key only
+```JAVA
+HashSet<Integer> hashSet1 = new HashSet<>();
+hashSet1.add(3); // add 3 to hash set
+hashSet1.remove(3); // remove 3
+System.out.println(hashSet1.contains(3)); // Return False
+```
+Map: Key -> Value
+```JAVA
+// unordered
+HashMap<Integer, String> mapTest = new HashMap<>();
+mapTest.put(1,"test1"); // add 
+mapTest.put(1,"test2"); // edit
+mapTest.put(2,"test3"); // add
+System.out.println(mapTest.containsKey(1)); // return True
+System.out.println(mapTest.get(1)); // return "test2"
+mapTest.remove(2);
+System.out.println(mapTest.get(2)); // return null         
+```
+
+#### Time complexity
+* Best/Average Case for Searching/Insertion/Deletion are both O(1)  
+* Worst case for searching/Insertion/Deletion are both O(n)
+> Worst case: When all nodes are attached to the same linked list.
+
+> Note: Hash table takes constant time, but this constant time is much bigger than a constant time for array.  
+#### Space complexity  
+
+Space complexity for hash map remains O(n) where:  
+n = number of elements in the hash map.
+
+## TreeMap/TreeSet
+
+```JAVA
+// TreeSet
+
+// When key is not primitive type
+Node A = new Node(5);
+TreeSet<Node> treeSet = new TreeSet<>();
+try{
+    treeSet.add(nodeA)  // cause Error. comparator not provided
+}catch (Exception e){
+    System.out.println(e.getMessage());
+}
+
+TreeSet<Node> TreeSet = new TreeSet<>(new NodeComparator());  // provide comparator
+try{
+    TreeSet.add(nodeA)  // success
+}catch (Exception e){
+    System.out.println(e.getMessage());   
+}
+```
+* TreeMap does not allow null key but allow multiple null values.
+* TreeMap maintains order. It stores keys in sorted and ascending order.
+```JAVA
+// TreeMap(ordered)
+
+// Key is primitive type 
+TreeMap<Integer, String> treeMap1 = new TreeMap<>();
+treeMap1.put(7, "This is 7"); 
+treeMap1.put(5, "This is 5");
+treeMap1.put(4, "This is 4");
+treeMap1.put(3, "This is 3");
+treeMap1.put(9, "This is 9");
+treeMap1.put(2, "This is 2");
+System.out.println(treeMap1.containsKey(5)); // return True
+System.out.println(treeMap1.get(5));  // return This is 5
+System.out.println(treeMap1.firstKey()); // return 2, as the treeMap is ordered
+System.out.println(treeMap1.LastKey()); //return 9
+System.out.println(treeMap1.floorKey(8)); // return 7
+System.out.println(treeMap1.ceilingKey(8)); // return 9
+System.out.println(treeMap1.floorKey(7)); // return 5
+System.out.println(treeMap1.ceilingKey(7)); // return 8
+treeMap1.remove(5);
+System.out.println(treeMap1.get(5)); // return null
+```
+
+#### Time Complexity
+* TreeMap has complexity of O(logN) for insertion and lookup.
+
 ------
+
 # Fun Questions
 > Q: Why does Java's Arrays.sort method use two different sorting algorithms for different types?  
 A : For primitive types, it does not matter if change their relative position. Therefore, a unstable quicksort can be used. On the other hand, It could cause bugs if change the relative position of reference types, Therefore, a stable merge sort is performed.

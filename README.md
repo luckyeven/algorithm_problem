@@ -214,5 +214,5 @@ System.out.println(treeMap1.get(5)); // return null
 ------
 
 # Fun Questions
-> Q: Why does Java's Arrays.sort method use two different sorting algorithms for different types?    
+> Q: Why does Java's Arrays.sort method use two different sorting algorithms for different types?  
 A : For primitive types, it does not matter if change their relative position. Therefore, a unstable quicksort can be used. On the other hand, It could cause bugs if change the relative position of reference types, Therefore, a stable merge sort is performed.
